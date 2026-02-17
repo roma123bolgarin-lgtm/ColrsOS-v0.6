@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-family: monospace;
+        margin: 20px;
+        background-color: black;
+    }
+    h1 {
+        color: #1b8f1b;
+        text-align: center;
+        font-family: monospace;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+        font-family: monospace;
+    }
+    h2 {
+        color: #1b8f1b;
+        text-align: center;
+        font-family: monospace;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #1b8f1b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    button:hover {
+        background-color: #1b8f1b;
+        transform: scale(1.1);
+    }
+    </style>
+<body>
+    <H1 id="title"></H1>
+    <H2 id="title2"></H2>
+    <title>ColrsOS</title>
+    <P>ColrsOS - це тестова операційна система, створена 11 річним розробником.</p>
+        <P>Ця операційна система зроблена з використанням C++.</p>
+        <P>ColrsOS - можливо, буде популярне в майбутньому.</p>
+        <P>Якщо ви хочете завантажити ColrsOS, натисніть на кнопку "Завантажити".</P>
+        <button onclick="window.location.href='https://github.com/roma123bolgarin-lgtm/ColrsOS-v0.1'"></button>
+        
+</body>
+</html>
+
+<script>
+const title = document.getElementById("title");
+const title2 = document.getElementById("title2");
+const text = "Downoload ColrsOS";
+let index = 0;
+function typeWriter() {
+    if (index < text.length) {
+        title.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 75);
+    } else {
+        setTimeout(() => {
+            title2.innerHTML = "Тестова операційна система";
+        }, 150);
+    }
+}
+typeWriter();
+</script>
+
+<script>
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((paragraph) => {
+        const text = paragraph.textContent;
+        paragraph.textContent = "";
+        let index = 0;
+        function type() {
+            if (index < text.length) {
+                paragraph.textContent += text[index];
+                index++;
+                setTimeout(type, 30);
+            }
+        }
+        type();
+    });
+</script>
+
+<script>
+    const button = document.querySelector("button");
+    const buttonText = "Завантажити";
+    let indexB = 0;
+    function typeButton() {
+        if (indexB < buttonText.length) {
+            button.textContent += buttonText[indexB];
+            indexB++;
+            setTimeout(typeButton, 100);
+        }
+    }
+    typeButton();
+</script>

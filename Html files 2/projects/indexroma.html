@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        font-family: monospace;
+        margin: 20px;
+        background-color: black;
+    }
+    h1 {
+        color: #1b8f1b;
+        text-align: center;
+        font-family: monospace;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+        font-family: monospace;
+    }
+    h2 {
+        color: #1b8f1b;
+        text-align: center;
+        font-family: monospace;
+    }
+    h3 {
+        color: #1b8f1b;
+        text-align: center;
+        font-family: monospace;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #1b8f1b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    button:hover {
+        background-color: #1b8f1b;
+        transform: scale(1.1);
+    }
+    h4 {
+        text-align: center;
+        font-family: monospace;
+    }
+    h4 a {
+        color: #1b8f1b;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    h4 a:hover {
+        color: #1b8f1b;
+        transform: scale(1.1);
+    }
+    </style>
+<body>
+    <H1 id="title"></H1>
+    <H2 id="title2"></H2>
+    <title>ColrsOS</title>
+    <P>ColrsOS - це тестова операційна система, створена 11 річним розробником.</p>
+    <P>Ця операційна система є експериментом, який дозволяє розробнику вивчати та практикувати навички програмування та розробки операційних систем.</p>
+    <P>ColrsOS - можливо, буде розвинуто в майбутньому.</p>
+    <P>Якщо ви хочете дізнатися мої проекти, натисніть на текст "Мої проекти".</P>
+    <h4 id="text4"><a href="http://127.0.0.1:5500/projects/index2.html"></a></h4>
+    <button onclick="window.location.href='http://127.0.0.1:5500/projects/indexexe.html'"></button>
+    <h3 id="title3"></h3>
+</body>
+</html>
+
+<script>
+const text = "ColrsOS";
+const textElement = document.getElementById("title");
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        textElement.innerHTML += text[i];
+        i++;
+        setTimeout(type, 190);
+    }
+}
+type();
+</script>
+
+<script>
+const text2 = "Моя операційна система";
+const textElement2 = document.getElementById("title2");
+let j = 0;
+
+function type2() {
+    if (j < text2.length) {
+        textElement2.innerHTML += text2[j];
+        j++;
+        setTimeout(type2, 80);
+    }
+}
+type2();
+</script>
+<script>
+const text3 = "Ця ос зроблена за допомогою C++ C та Assembly";
+const textElement3 = document.getElementById("title3");
+let k = 0;
+function type3() {
+    if (k < text3.length) {
+        textElement3.innerHTML += text3[k];
+        k++;
+        setTimeout(type3, 70);
+    }
+}
+type3();
+</script>
+<script>
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((paragraph) => {
+        const text = paragraph.textContent;
+        paragraph.textContent = "";
+        let indexP = 0;
+        function type() {
+            if (indexP < text.length) {
+                paragraph.textContent += text[indexP];
+                indexP++;
+                setTimeout(type, 20);
+            }
+        }
+        type();
+    });
+</script>
+<script>
+    const button = document.querySelector("button");
+    const buttonText = "Завантажити ColrsOS";
+    let indexB = 0;
+    function typeButton() {
+        if (indexB < buttonText.length) {
+            button.textContent += buttonText[indexB];
+            indexB++;
+            setTimeout(typeButton, 100);
+        }
+    }
+    typeButton();
+</script>
+<script>
+    const link = document.querySelector("h4 a");
+    const linkText = "Мої проекти";
+    let indexL = 0;
+    function typeLink() {
+        if (indexL < linkText.length) {
+            link.textContent += linkText[indexL];
+            indexL++;
+            setTimeout(typeLink, 100);
+        }
+    }
+    typeLink();
+</script>
